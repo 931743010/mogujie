@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>http://s17.mogucdn.com/p1/151112/upload_ie4wmmrxgvrtamtegqzdambqgqyde_750x316.jpg</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>http://s16.mogucdn.com/p1/151112/upload_ie3tmyjygu3dkmlegqzdimbqgayde_750x316.jpg</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>http://s18.mogucdn.com/p1/151110/upload_ie3taobuhaydmn3dgqzdambqgayde_750x316.jpg</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>http://s17.mogucdn.com/p1/151112/upload_ie4gcnbuha2gmmdegqzdambqgiyde_750x316.jpg</string>
+	</dict>
+</array>
+</plist>

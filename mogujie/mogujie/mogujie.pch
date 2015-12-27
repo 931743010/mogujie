@@ -1,0 +1,20 @@
+//
+//  mogujie.pch
+//  mogujie
+//
+//  Created by kevinlishuai on 15/12/26.
+//  Copyright © 2015年 kevinlishuai. All rights reserved.
+//
+
+#ifndef mogujie_pch
+#define mogujie_pch
+
+#import "LSConst.h"
+#import "UIView+frame.h"
+
+#define screenW [UIScreen mainScreen].bounds.size.width
+#define screenH [UIScreen mainScreen].bounds.size.height
+
+#define randomColor [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0]
+
+#endif /* mogujie_pch */
