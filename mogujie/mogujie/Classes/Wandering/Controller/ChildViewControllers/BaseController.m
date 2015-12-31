@@ -19,6 +19,7 @@
     self.tableView.scrollEnabled = NO;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollEnabledDidChanged) name:@"UITableViewScrollEnabledChangedNotification" object:nil];
+    
 }
 
 
@@ -40,5 +41,6 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 
 @end

@@ -12,9 +12,9 @@
 
 @interface LSWanderingController () <UIScrollViewDelegate>
 
-@property (nonatomic, weak) UIScrollView * scrollView;
+@property (nonatomic, strong) UIScrollView * scrollView;
 
-@property (nonatomic, weak) UIView * headerView;
+@property (nonatomic, strong) UIView * headerView;
 
 
 @end
@@ -108,6 +108,8 @@
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.contentSize = CGSizeMake(0, screenH * 2);
+    
+//    [self.scrollView addObserver:self forKeyPath:@"contentOffset" options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld) context:@"test"];
 }
 
 #pragma mark - <UIScrollViewDelegate>
@@ -117,12 +119,24 @@
         scrollView.contentOffset = CGPointMake(0, 300);
         [[NSNotificationCenter defaultCenter] postNotificationName:@"UITableViewScrollEnabledChangedNotification" object:nil];
         scrollView.scrollEnabled = NO;
+    } else if (scrollView.contentOffset.y >= 0)
+    {
+        
     }
 }
 
+#pragma mark - note
 - (void)wakeupScrollView
 {
     self.scrollView.scrollEnabled = YES;
+}
+
+
+
+
+- (void)dealloc
+{
+    [self.scrollView removeObserver:self forKeyPath:@"contentOffset"context:nil];
 }
 
 @end
