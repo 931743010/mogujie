@@ -46,7 +46,7 @@
     
     // 买买买
     LSBuyController * buyVC = [[LSBuyController alloc] init];
-    [self childViewController:buyVC imageName:@"icon_tabbar_timeline" selectedImageName:@"icon_tabbar_timeline_selected" withTitle:@"买买买"];
+    [self childViewController:buyVC imageName:@"Shopping-cart" selectedImageName:@"Shopping-cart_selected" withTitle:@"买买买"];
     
     // 聊聊聊
     LSChatController * chatVC = [[LSChatController alloc] init];
