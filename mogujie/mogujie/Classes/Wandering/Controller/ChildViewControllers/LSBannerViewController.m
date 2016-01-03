@@ -146,11 +146,6 @@ static NSString * identifier = @"UICollectionViewCell";
 }
 
 #pragma mark - UICollectionViewDatasource
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return YES;
-}
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
