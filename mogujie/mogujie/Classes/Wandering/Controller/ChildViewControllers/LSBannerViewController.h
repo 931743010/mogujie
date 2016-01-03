@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LSBannerViewController : UICollectionViewController
+@interface LSBannerViewController : UIViewController
 
 @end

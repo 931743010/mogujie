@@ -24,10 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    /**
+     *  初始化scrollview
+     */
     [self setupScrollView];
     
+    /**
+     *  初始化头部视图
+     */
     [self setupHeaderView];
     
+    /**
+     *  初始化底部视图
+     */
     [self setupBottomView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wakeupScrollView) name:@"note" object:nil];
@@ -46,14 +55,8 @@
 #pragma mark - 初始化图片轮播视图
 - (void)setupBanner
 {
-    UICollectionViewFlowLayout * flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumLineSpacing = 0;
-    flowLayout.minimumInteritemSpacing = 0;
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    flowLayout.itemSize = CGSizeMake(screenW, LSBannerH);
-    
 
-    LSBannerViewController * bannerVC = [[LSBannerViewController alloc] initWithCollectionViewLayout:flowLayout];
+    LSBannerViewController * bannerVC = [[LSBannerViewController alloc] init];
     bannerVC.view.frame = CGRectMake(0, 0, screenW, LSBannerH);
     [self.headerView addSubview:bannerVC.view];
     [self addChildViewController:bannerVC];
@@ -136,7 +139,8 @@
 
 - (void)dealloc
 {
-    [self.scrollView removeObserver:self forKeyPath:@"contentOffset"context:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+//    [self.scrollView removeObserver:self forKeyPath:@"contentOffset"context:nil];
 }
 
 @end

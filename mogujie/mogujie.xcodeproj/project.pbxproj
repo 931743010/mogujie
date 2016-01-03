@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0196A31C37C5BD001BE724 /* UIScrollView+LSState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0196A21C37C5BD001BE724 /* UIScrollView+LSState.m */; };
 		0F0CF9371C2E6C94000B54B1 /* TravelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF9361C2E6C94000B54B1 /* TravelController.m */; };
 		0F0CF93A1C2E75C2000B54B1 /* BeautyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF9391C2E75C2000B54B1 /* BeautyController.m */; };
 		0F0CF93D1C2E985A000B54B1 /* LSWanderingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0CF93C1C2E985A000B54B1 /* LSWanderingController.m */; };
@@ -44,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0196A11C37C5BD001BE724 /* UIScrollView+LSState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+LSState.h"; sourceTree = "<group>"; };
+		0F0196A21C37C5BD001BE724 /* UIScrollView+LSState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+LSState.m"; sourceTree = "<group>"; };
 		0F0CF9341C2E40ED000B54B1 /* mogujie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mogujie.pch; path = ../../mogujie.pch; sourceTree = "<group>"; };
 		0F0CF9351C2E6C94000B54B1 /* TravelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelController.h; sourceTree = "<group>"; };
 		0F0CF9361C2E6C94000B54B1 /* TravelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelController.m; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 			children = (
 				0F7436F81BF5D20700D0648D /* UIView+frame.h */,
 				0F7436F91BF5D20700D0648D /* UIView+frame.m */,
+				0F0196A11C37C5BD001BE724 /* UIScrollView+LSState.h */,
+				0F0196A21C37C5BD001BE724 /* UIScrollView+LSState.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -622,6 +627,7 @@
 				0F27A8FD1C01AB210071A3C4 /* LSConst.m in Sources */,
 				0F27A9101C01ABC40071A3C4 /* LSPublishViewController.m in Sources */,
 				0F0CF9371C2E6C94000B54B1 /* TravelController.m in Sources */,
+				0F0196A31C37C5BD001BE724 /* UIScrollView+LSState.m in Sources */,
 				0F8E7EA71BF57B5900DCD984 /* main.m in Sources */,
 				0F6D3B811C2CF8BA008B462D /* BoyFriendController.m in Sources */,
 				0F0DFFD81BF58F5600035B98 /* LSTabBar.m in Sources */,

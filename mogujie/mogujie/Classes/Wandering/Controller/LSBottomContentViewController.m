@@ -121,17 +121,12 @@
     labs(button.tag - self.previousSelectedButton.tag) >= 2 ? [self.contentView setContentOffset:offset animated:YES] : [self.contentView setContentOffset:offset animated:YES];
     
     self.previousSelectedButton = button;
-
     
     // 设置标题的点击偏移
     CGFloat offsetX = button.centerX - screenW * 0.5;
-    if (offsetX < 0) {
-        offsetX = 0;
-    }
+    if (offsetX < 0) offsetX = 0;
     CGFloat maxOffsetX = self.titleView.contentSize.width - screenW;
-    if (offsetX > maxOffsetX) {
-        offsetX = maxOffsetX;
-    }
+    if (offsetX > maxOffsetX) offsetX = maxOffsetX;
     [self.titleView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
 }
 
@@ -147,10 +142,7 @@
     contentView.delegate = self;
     self.contentView = contentView;
     
-    UIView *view = [self.childViewControllers firstObject].view;
-    view.frame = contentView.bounds;
-    view.backgroundColor = randomColor;
-    [contentView addSubview:view];
+    [self chooseViewControllerAtIndex:0];
 }
 
 #pragma mark - <UIScrollViewDelegate>
@@ -161,6 +153,7 @@
     [self chooseViewControllerAtIndex:index];
     
     UIButton * button = self.titleView.subviews[index];
+    
     [self buttonClick:button];
 }
 
@@ -173,8 +166,10 @@
 #pragma mark - 选择控制器
 - (void)chooseViewControllerAtIndex:(NSInteger)index
 {
-    UIViewController * vc = self.childViewControllers[index];
-    if (vc.viewIfLoaded) return;
+    UITableViewController * vc = self.childViewControllers[index];
+    if (vc.viewIfLoaded) {
+        return;
+    }
     [self.contentView addSubview:vc.view];
     vc.view.frame = CGRectMake(index * screenW, 0, screenW, self.contentView.height);
     vc.view.backgroundColor = randomColor;

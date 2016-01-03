@@ -69,7 +69,7 @@
 #pragma mark - 初始化tabBar
 - (void)setupTabBar
 {
-    [self setValue:[[LSTabBar alloc] init] forKey:@"tabBar"];
+    [self setValue:[[LSTabBar alloc] init] forKeyPath:@"tabBar"];
     self.tabBar.tintColor = [UIColor redColor];
 }
 
