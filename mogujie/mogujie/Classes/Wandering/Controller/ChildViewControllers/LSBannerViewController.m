@@ -66,6 +66,15 @@ static NSString * identifier = @"UICollectionViewCell";
     [self setupPageControl];
     
     [self setupTimer];
+    
+    [self addObserver];
+}
+
+- (void)addObserver
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopTimer) name:@"kStopTimerNotification" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupTimer) name:@"kResumeTimerNotification" object:nil];
 }
 
 - (void)setupPageControl
@@ -166,8 +175,7 @@ static NSString * identifier = @"UICollectionViewCell";
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    [self.timer invalidate];
-    self.timer = nil;
+    [self stopTimer];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -177,6 +185,12 @@ static NSString * identifier = @"UICollectionViewCell";
     self.pageControl.currentPage = currentPage;
 }
 
+
+- (void)stopTimer
+{
+    [self.timer invalidate];
+    self.timer = nil;
+}
 
 
 @end

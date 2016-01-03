@@ -83,6 +83,8 @@
     publishNav.transitioningDelegate = [LSContextTransitioning sharedContextTransitioning];
     
     [self presentViewController:publishNav animated:YES completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"kStopTimerNotification" object:nil];
 }
 
 

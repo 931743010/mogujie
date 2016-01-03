@@ -89,6 +89,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     UINavigationBar * navBar = [UINavigationBar appearance];
     [navBar setBarTintColor:[UIColor whiteColor]];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"kResumeTimerNotification" object:nil];
 }
 
 
